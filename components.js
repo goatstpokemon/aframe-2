@@ -2,14 +2,13 @@ AFRAME.registerComponent('foo', {
   init: function () {
     const plane = document.getElementById('plane');
     let quote;
-    fetch('https://api.kanye.rest/')
+    fetch('https://swapi.dev/api/planets/1/')
       .then((res) => res.json())
       .then((data) => {
         quote = data;
       });
     plane.addEventListener('mouseenter', function (e) {
-      console.log('hey');
-      console.log(quote.quote);
+      console.log(quote);
     });
   },
   update: function () {},
