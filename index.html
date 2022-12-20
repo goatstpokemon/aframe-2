@@ -14,14 +14,14 @@
   <body>
     <a-scene background="color: #FAFAFA" id="js--scene">
       <a-assests>
-        <a-asset-item id="pan-obj" src=""></a-asset-item>
-        <a-asset-item id="pan-mtl" src=""></a-asset-item>
+        <a-asset-item id="bucket-obj" src="./bucekt.obj"></a-asset-item>
+        <a-asset-item id="bucket-mtl" src="./bucekt.mtl"></a-asset-item>
       </a-assests>
       <a-obj-model
-        src="#pan-obj"
-        mtl="#pan-mtl"
+        src="#bucket-obj"
+        mtl="#bucket-mtl"
         position="0 1 -5"
-        scale="0.01"
+        scale="0.5 0.5 0.5"
       ></a-obj-model>
       <a-camera id="js--camera">
         <a-entity
