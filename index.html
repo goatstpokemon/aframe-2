@@ -13,16 +13,6 @@
   </head>
   <body>
     <a-scene background="color: #FAFAFA" id="js--scene">
-      <a-assests>
-        <a-asset-item id="bucket-obj" src="./bucekt.obj"></a-asset-item>
-        <a-asset-item id="bucket-mtl" src="./bucekt.mtl"></a-asset-item>
-      </a-assests>
-      <a-obj-model
-        src="#bucket-obj"
-        mtl="#bucket-mtl"
-        position="0 1 -5"
-        scale="0.5 0.5 0.5"
-      ></a-obj-model>
       <a-camera id="js--camera">
         <a-entity
           cursor="fuse: true; fuseTimeout: 1000"
@@ -33,93 +23,40 @@
         >
         </a-entity>
       </a-camera>
-      <a-plane
-        color="yellow"
-        height="50"
-        width="50"
-        rotation="-90 0 0"
-        static-body
-        id="plane"
-        class="js--interact"
-        foo
-      ></a-plane>
-      <a-box
-        foo
-        dynamic-body
-        color="blue"
-        position="-6 0.5 -6"
-        class="js--places js--interact"
-      ></a-box>
-      <a-box
-        foo
-        dynamic-body
-        color="blue"
-        position="6 0.5 -6"
-        class="js--places js--interact"
-      ></a-box>
-      <a-box
-        foo
-        dynamic-body
-        color="blue"
-        position="-6 0.5 6"
-        class="js--places js--interact"
-      ></a-box>
-      <a-box
-        foo
-        dynamic-body
-        color="blue"
-        position="6 0.5 6"
-        class="js--places js--interact"
-      ></a-box>
 
-      <a-box
-        color="green"
-        position="-4 0.5 -4"
-        class="js--pickup js--interact"
-      ></a-box>
-      <a-box
-        color="green"
-        position="4 0.5 -4"
-        class="js--pickup js--interact"
-      ></a-box>
-      <a-box
-        color="green"
-        position="-4 0.5 4"
-        class="js--pickup js--interact"
-      ></a-box>
-      <a-box
-        color="green"
-        position="4 0.5 4"
-        class="js--pickup js--interact"
-      ></a-box>
-      <a-cylinder
-        class="js--placable js--interact"
-        color="red"
+      <a-entity
+        geometry="primitive: box"
+        class="js--interact planets"
+        material="color: red"
         radius="0.5"
-        height="0.1"
-        position="0 0 4"
-      ></a-cylinder>
-      <a-cylinder
-        class="js--placable js--interact"
-        color="red"
+        position="-4 0.5 -1"
+        reloader
+        text="align: right; color: #000; width: 10; value:
+        name"
+      >
+      </a-entity>
+      <a-entity
+        geometry="primitive: box"
+        class="js--interact film"
+        material="color: red"
         radius="0.5"
-        height="0.1"
-        position="0 0 -4"
-      ></a-cylinder>
-      <a-cylinder
-        class="js--placable js--interact"
-        color="red"
+        position="2 5 -1"
+        film
+        text="align: right; color: #000; width: 10; value:
+        name"
+      >
+      </a-entity>
+      <a-entity
+        geometry="primitive: box"
+        class="js--interact vc"
+        material="color: red"
         radius="0.5"
-        height="0.1"
-        position="4 0 0"
-      ></a-cylinder>
-      <a-cylinder
-        class="js--placable js--interact"
-        color="red"
-        radius="0.5"
-        height="0.1"
-        position="-4 0 0"
-      ></a-cylinder>
+        position="2 3 -1"
+        vehicles
+        text="align: right; color: #000; width: 10; value:
+        name"
+      >
+      </a-entity>
     </a-scene>
   </body>
 </html>
