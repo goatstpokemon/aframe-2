@@ -1,4 +1,4 @@
-AFRAME.registerComponent('reloader', {
+AFRAME.registerComponent('planet', {
   init: function () {
     const planets = document.querySelector('.planets');
 
@@ -11,7 +11,8 @@ AFRAME.registerComponent('reloader', {
           planets.setAttribute('text', 'value', data.name);
         });
     };
-    this.el.sceneEl.addEventListener('click', this.newPlanet);
+    console.log(this.el);
+    this.el.addEventListener('click', this.newPlanet);
   },
   update: function () {
     this.newPlanet();
@@ -51,7 +52,7 @@ AFRAME.registerComponent('vehicles', {
     const vehicles = document.querySelector('.vc');
     const BASE_URL = 'https://swapi.dev/api/vehicles/';
     this.newVehicles = function () {
-      let randomNum = Math.floor(Math.random() * 39) + 1;
+      let randomNum = Math.floor(Math.random() * 38 ) + 1;
       fetch(BASE_URL + randomNum)
         .then((response) => response.json())
         .then((data) => {
